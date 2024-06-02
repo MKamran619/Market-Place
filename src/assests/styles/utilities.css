@@ -1,0 +1,50 @@
+.ml-5 {
+  margin-left: 5%;
+}
+.ml-10 {
+  margin-left: 10%;
+}
+.mr-10 {
+  margin-right: 10%;
+}
+.mt-5 {
+  margin-top: 5%;
+}
+.flex {
+  display: flex;
+}
+.w-30 {
+  width: 30%;
+}
+.w-40 {
+  width: 40%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-85 {
+  width: 85%;
+}
+.w-90 {
+  width: 90%;
+}
+
+.justify-btw {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.centered-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-vertical-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
