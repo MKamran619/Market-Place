@@ -4,18 +4,29 @@ import TopPanelComponent from "./TopPanelComponent";
 
 export default () => {
   return (
-    <div className="centered-flex mt-5">
+    <div className="centered-flex">
       <div className="w-85">
         <div className="centered-flex">
+          <div className="topbar activebar"></div>
+          <div className="topbar"></div>
+          <div className="topbar"></div>
+          <div className="topbar"></div>
+          <div className="topbar"></div>
+        </div>
+        <div className="centered-flex">
           <div className="horizontal-container">
-            <TopPanelComponent />
+            <TopPanelComponent
+              caption="Night sky collection"
+              title="With the Stars"
+              showBtn={true}
+            />
           </div>
         </div>
         <div className="collections">
           <div className=" mt-5">
             <h2>Collections</h2>
           </div>
-          <div className="centered-flex">
+          <div className="collections-item centered-flex">
             <DetailsCardComponent
               name="Léa Jacquot"
               cardImg="Rectangle 10.png"

@@ -22,7 +22,7 @@ export default (props) => {
           <div className="content">
             <h5>{props.content}</h5>
           </div>
-          <div style={{ width: "20px" }}>
+          <div style={{ width: "20px", marginBottom: "-35px" }}>
             <IdCards title="Artist" name={props.name} img={props.cardImg} />
           </div>
         </div>

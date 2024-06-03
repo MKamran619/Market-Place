@@ -30,6 +30,17 @@ button {
   color: #e6e9f2;
   background-color: var(--dark-gray-color);
 }
+/* topbar */
+.topbar {
+  background-color: var(--primary-color);
+  height: 12px;
+  width: 17.5%;
+  margin: 30px 10px 15px;
+  border-radius: 10px;
+}
+.activebar {
+  background-color: var(--dark-gray-color);
+}
 
 /* TopPanel */
 .top-panel {
@@ -52,7 +63,7 @@ button {
 }
 .top-panel-content p {
   font-size: 15px;
-  margin-bottom: -25px;
+  margin-bottom: -20px;
   color: #617587;
 }
 /* collections */
@@ -66,8 +77,8 @@ button {
 
 .detail-card {
   width: 355px;
-  height: 500px;
-  margin: 20px;
+  height: 470px;
+  margin: 0 20px 30px;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0px 4px 66px 0px #00000029;
@@ -82,7 +93,8 @@ button {
   font-weight: 700;
   text-align: left;
 }
-.detail-card .ntf {
+.detail-card .ntf,
+.collection-card .btc {
   height: 30px;
   width: 100px;
   color: var(--dark-gray-color);
@@ -122,10 +134,80 @@ button {
   text-align: left;
 }
 
+.collection-card {
+  width: 355px;
+  height: 400px;
+  margin: 0 20px 30px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 4px 66px 0px #00000029;
+}
+.collection-card .header-img img {
+  width: 100%;
+  /* height: 200px; */
+  border-radius: 30px;
+}
+
 /* footer */
 .footer {
   margin-top: 20px;
   width: 100%;
   height: 70px;
   background-color: var(--primary-color);
+}
+
+@media (max-width: 600px) {
+  .header {
+    display: block !important;
+    margin-bottom: 20px;
+  }
+  .horizontal-container {
+    height: 600px;
+    margin-bottom: 50px;
+  }
+  .top-panel {
+    display: block !important;
+    height: 100%;
+  }
+  .top-panel-left {
+    display: flex;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 30px 0;
+    margin-left: 0 !important;
+  }
+  .top-panel-content {
+    width: 100% !important;
+  }
+  .top-panel-btn {
+    display: block !important;
+  }
+  .top-panel-btn Button {
+    margin: 10px;
+    margin-left: 0 !important;
+  }
+  .top-panel-btn-right {
+    margin-left: 0 !important;
+  }
+  .top-panel-right {
+    display: flex;
+    width: 100% !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .top-panel-right img {
+    width: 200px;
+  }
+
+  .collections-item,
+  .collection-container-cards {
+    display: block !important;
+  }
+  .detail-card h3 {
+    font-size: medium;
+  }
+  .collection-card {
+    height: 320px !important;
+  }
 }
