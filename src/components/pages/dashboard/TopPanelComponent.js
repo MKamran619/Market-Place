@@ -1,13 +1,18 @@
 import React from "react";
 import IdCards from "../../common/IdCards";
 import Button from "../../common/Button";
+import { useNavigate } from "react-router-dom";
 export default (props) => {
+  const navigate = useNavigate();
+  const onClickedBuyBtn = () => {
+    navigate("/collections");
+  };
   return (
-    <div className="top-panel centered-flex">
+    <div className="top-panel justify-center">
       <div className="top-panel-left w-60 ml-5">
-        <div className="center-vertical-left ml-5 ">
+        <div className="justify-vertical-left ml-5 ">
           <div className="">
-            <div className="trending centered-flex">
+            <div className="trending justify-center">
               <h5>Trending Now</h5>
             </div>
             <div className="top-panel-content">
@@ -25,10 +30,15 @@ export default (props) => {
               />
             </div>
             {props.showBtn && (
-              <div className="top-panel-btn center-vertical-left">
+              <div className="top-panel-btn justify-vertical-left">
                 <div>
                   {" "}
-                  <Button type="contained" title="Buy" height="40px" />
+                  <Button
+                    type="contained"
+                    title="Buy"
+                    height="40px"
+                    onButtonClicked={onClickedBuyBtn}
+                  />
                 </div>
                 <div className="top-panel-btn-right ml-5">
                   {" "}

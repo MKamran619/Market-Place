@@ -1,10 +1,23 @@
 import React from "react";
 import IdCards from "../../common/IdCards";
+import Button from "../../common/Button";
+import { useNavigate } from "react-router-dom";
 
 export default (props) => {
+  const navigate = useNavigate();
+  const handleClicked = () => {
+    navigate("/collections");
+  };
   return (
-    <div className="centered-flex">
-      <div className="detail-card  centered-flex">
+    <div className="justify-center">
+      <div className="detail-card  justify-center">
+        <div style={{ display: props.showBtn }}>
+          <Button
+            type="arrowbtn"
+            title="Go to collection"
+            onButtonClicked={() => handleClicked("")}
+          />
+        </div>
         <div className="w-90">
           <div className="header-img">
             <img src={`./images/card details/${props.img}`} />
@@ -14,7 +27,7 @@ export default (props) => {
             <div>
               <h3>{props.title}</h3>
             </div>
-            <div className="ntf centered-flex">{props.ntf} NTF</div>
+            <div className="ntf justify-center">{props.ntf} NTF</div>
           </div>
           <div className="priceRange">
             <p>Price Range : {props.priceRange}</p>

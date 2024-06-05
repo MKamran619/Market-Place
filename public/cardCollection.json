@@ -1,0 +1,38 @@
+[
+  {
+    "id": "Night",
+    "title": "Night is coming",
+    "btc": "0.12",
+    "img": "Mask group 1.png"
+  },
+  {
+    "id": "stars",
+    "title": "With the stars",
+    "btc": "0.12",
+    "img": "Mask group 2.png"
+  },
+  {
+    "id": "Summer",
+    "title": "Summer",
+    "btc": "0.12",
+    "img": "image 10.png"
+  },
+  {
+    "id": "Quiet",
+    "title": "Quiet",
+    "btc": "0.14",
+    "img": "Mask group 3.png"
+  },
+  {
+    "id": "Travel",
+    "title": "Travel",
+    "btc": "0.12",
+    "img": "image 13.png"
+  },
+  {
+    "id": "rain",
+    "title": "The rain",
+    "btc": "0.18",
+    "img": "Mask group 4.png"
+  }
+]

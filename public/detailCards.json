@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Léa Jacquot",
+    "cardImg": "Rectangle 10.png",
+    "title": "Night Sky",
+    "ntf": "120",
+    "img": "image 8.png",
+    "priceRange": "0.12BTC - 0.18BTC",
+    "content": "Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempor...",
+    "showBtn": ""
+  },
+  {
+    "name": "Julien",
+    "cardImg": "Rectangle 13.png",
+    "title": "Future",
+    "ntf": "120",
+    "img": "Mask group.png",
+    "priceRange": "0.12BTC - 0.18BTC",
+    "content": "Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempor...",
+    "showBtn": "none"
+  },
+  {
+    "name": "Maria",
+    "cardImg": "Rectangle 10.png",
+    "title": "Mother Nature",
+    "ntf": "120",
+    "img": "Mask group 2.png",
+    "priceRange": "0.12BTC - 0.18BTC",
+    "content": "Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempor...",
+    "showBtn": "none"
+  }
+]

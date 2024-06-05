@@ -35,15 +35,14 @@
 .justify-btw {
   display: flex;
   justify-content: space-between;
-  text-align: center;
   align-items: center;
 }
-.centered-flex {
+.justify-center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.center-vertical-left {
+.justify-vertical-left {
   display: flex;
   justify-content: flex-start;
   align-items: center;

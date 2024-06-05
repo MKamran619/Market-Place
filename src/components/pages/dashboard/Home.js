@@ -1,19 +1,40 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DetailsCardComponent from "./DetailsCardComponent";
 import TopPanelComponent from "./TopPanelComponent";
 
-export default () => {
+const ParentComponent = () => {
+  const [data, setData] = useState([]);
+  const [hoveredCard, setHoveredCard] = useState("Léa Jacquot");
+
+  useEffect(() => {
+    // Fetch the data from the JSON file in the public directory
+    fetch("/detailCards.json")
+      .then((response) => response.json())
+      .then((data) => {
+        setData(data);
+        console.log("data = ", data);
+      });
+  }, []);
+
+  const handleMouseEnter = (cardName) => {
+    setHoveredCard(cardName);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredCard("Léa Jacquot");
+  };
+
   return (
-    <div className="centered-flex">
+    <div className="justify-center">
       <div className="w-85">
-        <div className="centered-flex">
+        <div className="justify-center">
           <div className="topbar activebar"></div>
           <div className="topbar"></div>
           <div className="topbar"></div>
           <div className="topbar"></div>
           <div className="topbar"></div>
         </div>
-        <div className="centered-flex">
+        <div className="justify-center">
           <div className="horizontal-container">
             <TopPanelComponent
               caption="Night sky collection"
@@ -23,40 +44,33 @@ export default () => {
           </div>
         </div>
         <div className="collections">
-          <div className=" mt-5">
+          <div className="mt-5">
             <h2>Collections</h2>
           </div>
-          <div className="collections-item centered-flex">
-            <DetailsCardComponent
-              name="Léa Jacquot"
-              cardImg="Rectangle 10.png"
-              title="Night Sky"
-              ntf="120"
-              img="image 8.png"
-              priceRange="0.12BTC - 0.18BTC"
-              content="Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempor..."
-            />
-            <DetailsCardComponent
-              name="Julien"
-              cardImg="Rectangle 13.png"
-              title="Future"
-              ntf="120"
-              img="Mask group.png"
-              priceRange=" 0.12BTC - 0.18BTC"
-              content="Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempor..."
-            />
-            <DetailsCardComponent
-              name="Maria"
-              cardImg="Rectangle 10.png"
-              title="Mother Nature"
-              ntf="120"
-              img="Mask group 2.png"
-              priceRange="0.12BTC - 0.18BTC"
-              content="Lorem ipsum dolor sit amet, consectetur adicing elit, sed do eiusmod tempor..."
-            />
+          <div className="collections-item">
+            {data.map((card) => (
+              <div
+                key={card.name}
+                onMouseEnter={() => handleMouseEnter(card.name)}
+                onMouseLeave={handleMouseLeave}
+              >
+                <DetailsCardComponent
+                  showBtn={hoveredCard === card.name ? "" : "none"}
+                  name={card.name}
+                  cardImg={card.cardImg}
+                  title={card.title}
+                  ntf={card.ntf}
+                  img={card.img}
+                  priceRange={card.priceRange}
+                  content={card.content}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
   );
 };
+
+export default ParentComponent;
