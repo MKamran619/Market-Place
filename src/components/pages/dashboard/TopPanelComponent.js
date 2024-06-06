@@ -1,11 +1,23 @@
 import React from "react";
 import IdCards from "../../common/IdCards";
 import Button from "../../common/Button";
+import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+
 export default (props) => {
+  const location = useLocation();
   const navigate = useNavigate();
+
+  const [connection, setConnection] = React.useState("Connect Wallet");
+  const { AccountActive } = location?.state || {
+    AccountActive: null,
+  };
+  React.useEffect(() => {
+    setConnection(AccountActive);
+  }, [AccountActive]);
   const onClickedBuyBtn = () => {
-    navigate("/collections");
+    if (connection == "Account") navigate("/collections");
+    else navigate("/connect-wallet");
   };
   return (
     <div className="top-panel justify-center">

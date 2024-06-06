@@ -9,6 +9,28 @@ button {
   cursor: pointer;
 }
 
+/* connect-wallet */
+.connect-wallet {
+  position: absolute;
+  padding-top: 130px;
+  width: 100%;
+  height: 500px;
+  z-index: 999;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+.wallet-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  width: 180px;
+  height: 180px;
+  border-radius: 20px;
+  margin-left: 70px;
+  background-color: #fff;
+}
+
 .horizontal-container {
   width: 100%;
   height: 380px;

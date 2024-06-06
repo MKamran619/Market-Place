@@ -1,8 +1,14 @@
 import React from "react";
 import Button from "../../common/Button";
+import { useNavigate } from "react-router-dom";
 
 export default (props) => {
-  const handleClicked = () => {};
+  const navigate = useNavigate();
+  const handleClicked = (item) => {
+    navigate("/account", {
+      state: { AccountActive: "Account", boughtItem: item },
+    });
+  };
   return (
     <div className="justify-center">
       <div className="collection-card  justify-center">
@@ -10,7 +16,7 @@ export default (props) => {
           <Button
             type="arrowbtn"
             title="Buy"
-            onButtonClicked={() => handleClicked("")}
+            onButtonClicked={() => handleClicked(props.img)}
           />
         </div>
         <div className="w-90">
