@@ -225,9 +225,21 @@ button {
 }
 
 @media (max-width: 600px) {
+  .connect-wallet {
+    height: 800px;
+  }
+  .connect-wallet h1 {
+    font-size: 20px;
+  }
+  .connect-wallet-card {
+    display: block !important;
+    margin-left: 25px;
+  }
   .header {
     display: block !important;
     margin-bottom: 20px;
+    padding-top: 10px;
+    height: 150px;
   }
   .horizontal-container {
     height: 630px;

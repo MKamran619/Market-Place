@@ -7,11 +7,11 @@ export default () => {
     navigate("/account", { state: { AccountActive: "Account" } });
   };
   return (
-    <div className="connect-wallet ">
+    <div className="connect-wallet">
       <div className="justify-center">
         <h1>Choose the wallet to connect</h1>
       </div>
-      <div className="justify-center">
+      <div className="connect-wallet-card justify-center">
         <div className="wallet-container" onClick={handleClicked}>
           {" "}
           <h1>Wallet 1</h1>

@@ -45,7 +45,9 @@ export default () => {
   return (
     <div style={{ backgroundColor: color }}>
       <div className="header justify-btw ml-10 mr-10">
-        <h1>MARKETPLACE.</h1>
+        <div className="justify-center">
+          <h1>MARKETPLACE.</h1>
+        </div>
         <div className="justify-center">
           <Button
             type="outlined"
