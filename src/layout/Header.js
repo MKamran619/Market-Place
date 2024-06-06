@@ -35,10 +35,10 @@ export default () => {
   }, [boughtItem]);
 
   const onClickedBtn = () => {
-    if (connection == "Connect Wallet") {
+    if (connection === "Connect Wallet") {
       setColor("#e6e9f2");
       navigate("/connect-wallet");
-    } else if (connection == "Account") {
+    } else if (connection === "Account") {
       setShowDialog("");
     }
   };

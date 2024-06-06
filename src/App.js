@@ -8,7 +8,6 @@ import ConnectWallet from "./components/pages/connectWallet/ConnectWallet";
 import "./assests/styles/styles.css";
 import "./assests/styles/utilities.css";
 function App() {
-  const [showConnection, setShowConnect] = React.useState("false");
   return (
     <Router>
       <div className="app">
